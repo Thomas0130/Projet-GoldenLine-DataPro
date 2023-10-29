@@ -3,22 +3,22 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema Thomas0130$goldenlinedb
+-- Schema goldenlineDB
 -- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `Thomas0130$goldenlinedb` ;
+DROP SCHEMA IF EXISTS `goldenlineDB` ;
 
 -- -----------------------------------------------------
--- Schema Thomas0130$goldenlinedb
+-- Schema goldenlineDB
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `Thomas0130$goldenlinedb` DEFAULT CHARACTER SET utf8 ;
-USE `Thomas0130$goldenlinedb` ;
+CREATE SCHEMA IF NOT EXISTS `goldenlineDB` DEFAULT CHARACTER SET utf8 ;
+USE `goldenlineDB` ;
 
 -- -----------------------------------------------------
--- Table `Thomas0130$goldenlinedb`.`collecte`
+-- Table `goldenlineDB`.`collecte`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `Thomas0130$goldenlinedb`.`collecte` ;
+DROP TABLE IF EXISTS `goldenlineDB`.`collecte` ;
 
-CREATE TABLE IF NOT EXISTS `Thomas0130$goldenlinedb`.`collecte` (
+CREATE TABLE IF NOT EXISTS `goldenlineDB`.`collecte` (
   `idCOLLECTE` INT NOT NULL AUTO_INCREMENT,
   `prixAlimentaire` INT NOT NULL DEFAULT 0,
   `prixMultimedia` INT NOT NULL DEFAULT 0,
@@ -30,11 +30,11 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Thomas0130$goldenlinedb`.`client`
+-- Table `goldenlineDB`.`client`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `Thomas0130$goldenlinedb`.`client` ;
+DROP TABLE IF EXISTS `goldenlineDB`.`client` ;
 
-CREATE TABLE IF NOT EXISTS `Thomas0130$goldenlinedb`.`client` (
+CREATE TABLE IF NOT EXISTS `goldenlineDB`.`client` (
   `idCLIENT` INT NOT NULL AUTO_INCREMENT,
   `nbEnfants` INT NOT NULL DEFAULT 0,
   `categorieSocioprofessionnelle` VARCHAR(64) NOT NULL,
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `Thomas0130$goldenlinedb`.`client` (
   INDEX `idCollecte_idx` (`idCollecte` ASC) VISIBLE,
   CONSTRAINT `idCollecte`
     FOREIGN KEY (`idCollecte`)
-    REFERENCES `Thomas0130$goldenlinedb`.`collecte` (`idCOLLECTE`)
+    REFERENCES `goldenlineDB`.`collecte` (`idCOLLECTE`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
