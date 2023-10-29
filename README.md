@@ -9,6 +9,9 @@ Des valeurs d’exemple sont fournies par défaut.
 Il faut ensuite installer les dépendances de l’application via la commande suivante :<br>
 ```pip install -r requirements.txt```
 
+*(Optionnel)* Si besoin de remplir la base de données avec des valeurs aléatoires (par exemple pour tester la solution en locale) :<br>
+```python fillDBwithRandomData.py```
+
 Finalement, il suffit d’exécuter le fichier nommé **app.py** afin de démarrer l’application, via la commande suivante :<br>
 ```python app.py```
 
