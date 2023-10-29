@@ -16,6 +16,6 @@ Finalement, il suffit d’exécuter le fichier nommé **app.py** afin de démarr
 ```python app.py```
 
 ## UTILISATION
-L’application est accessible par navigateur web, via l’adresse de votre hébergeur.
-Par défaut, en local, l’adresse est : http://localhost:5000
+L’application est accessible par navigateur web, via l’adresse de votre hébergeur.<br>
+Par défaut, en local, l’adresse est : http://localhost:5000<br>
 J'ai hébergé mon application sur pythonanywhere.com à l'adresse suivante : https://thomas0130.pythonanywhere.com/
